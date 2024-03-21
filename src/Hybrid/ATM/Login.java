@@ -102,7 +102,8 @@ public class Login extends JFrame implements ActionListener {
                 textField2.setText("");          //clear text field
                 passwordField3.setText("");      //clear password field
             }else if (e.getSource() == button3){
-
+                new Signup();
+                setVisible(false);
             }
         }catch (Exception E){
             E.printStackTrace();

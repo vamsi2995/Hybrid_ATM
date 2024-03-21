@@ -203,17 +203,17 @@ public class Signup3 extends JFrame implements ActionListener {
 
         String fac = "";
         if(c1.isSelected()){
-            fac = fac+"ATM CARD ";
-        } else if (c2.isSelected()) {
-            fac = fac+"Internet Banking";
-        } else if (c3.isSelected()) {
-            fac = fac+"Mobile Banking";
-        } else if (c4.isSelected()) {
-            fac = fac+"EMAIL Alerts";
-        } else if (c5.isSelected()) {
-            fac=fac+"Cheque Book";
-        } else if (c6.isSelected()) {
-            fac=fac+"E-Statement";
+            fac = fac+" ATM_CARD ";
+        }if (c2.isSelected()) {
+            fac = fac+" Internet_Banking ";
+        }if (c3.isSelected()) {
+            fac = fac+" Mobile_Banking ";
+        }if (c4.isSelected()) {
+            fac = fac+" EMAIL_Alerts ";
+        }if (c5.isSelected()) {
+            fac=fac+" Cheque_Book ";
+        }if (c6.isSelected()) {
+            fac=fac+" E-Statement ";
         }
         try {
             if (e.getSource()==s){ //if submit is selected
