@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
 
 public class Login extends JFrame implements ActionListener {
     JLabel label1,label2,label3;
@@ -90,6 +91,7 @@ public class Login extends JFrame implements ActionListener {
         setLayout(null);
         setSize(850,480);
         setLocation(350,200);
+//        setUndecorated(true);
         setVisible(true);
     }
 
@@ -97,6 +99,18 @@ public class Login extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try{
             if(e.getSource() == button1){
+                Connn c=new Connn();
+                String cardno = textField2.getText();
+                String pin = passwordField3.getText();
+                String q = "select * from login where card_number='"+cardno+"' and pin ='"+pin+"'";
+                ResultSet resultSet=c.statement.executeQuery(q);
+                if (resultSet.next()){
+                    setVisible(false);
+                    new main_Class(pin);
+                }else {
+                    JOptionPane.showMessageDialog(null,"Incorrect CardNumber or pin ");
+                }
+
 
             }else if (e.getSource() == button2){
                 textField2.setText("");          //clear text field
