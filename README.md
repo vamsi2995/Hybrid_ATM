@@ -90,9 +90,4 @@ Using Maven:
 mvn test
 ```
 
----
-
-⬆️ Return
-
-```
 
